@@ -1,0 +1,60 @@
+#projetosfield {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.projetosx {
+    width: 32%;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    background-color: rgb(223, 231, 238);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .5);
+}
+
+.projetosx:hover{
+    transform: scale(1.1);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+    transition: transform .3s, box-shadow .3s;
+}
+
+body.dark .projetosx{
+    background-color: rgb(66, 69, 71);
+}
+
+.projetosx img{
+    width: 100%;
+    height: 180px;
+    border-radius: 15px 15px 0px 0px;
+    cursor: pointer;
+}
+
+.tituloProjeto{
+    text-align: center;
+    color: rgb(158, 9, 9);
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+body.dark .tituloProjeto{
+    color: white;
+}
+
+.descricaoProjeto, .paragrafoLinguagens{
+    padding: 5px 10px;
+    font-size: 1.1em;
+}
+
+.paragrafoLinguagens{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.spanLinguagens{
+    background-color: brown;
+    border-radius: 10%;
+    color: white;
+    padding: 2px; margin: 0px 2px;
+}

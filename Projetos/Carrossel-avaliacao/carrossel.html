@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../estilobase.css">
+    <link rel="stylesheet" href="carrossel.css">
+    <title>Carrossel de avaliações</title>
+</head>
+    <header>
+        <p id="logo">EdsonCTM</p>
+        <nav id="navHeader">
+            <a href="../../index.html">Home</a>
+            <a href="../../Curriculo/curriculo.html">Currículo</a>
+            <a href="../../Sobre/sobre.html">Sobre</a>
+            <a href="../../Projetos/projetos.html">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <!--A div abaixo é para o botão de modo noturno-->
+
+        <div id="botoesMenu">
+            <input type="checkbox" id="darkMode">
+            <label for="darkMode" id="labelDarkMode">
+                <span id="sun">&#x2600</span>
+                <span id="moon">&#x1F31B</span>
+                <div id="rollball"></div>
+            </label>
+            
+        </div>
+    </header>
+    <main>
+        <section class="container">
+                <h2>Avaliações</h2>
+            <article class="avaliacao">
+                <div class="imagem-container">
+                    <img src="./imagens/AlanTuring.png" id="imagemAvaliador" alt="">
+                </div>
+                <div class="botoes">
+                    <button class="btn voltar">&lt;</button>
+                    <h4 id="autor">Alan Turing</h4>
+                    <button class="btn avancar">&gt;</button>
+                </div>
+                <p id="trabalho">Matemático</p>
+                <p id="textoAvaliacao">Este portfólio é um dos melhores que já vi na vida, seus códigos são magníficos, funcionam e são indecifráveis.</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Contato</p>
+        <div id="contato">
+             <a href="https://github.com/Edsonctm" target="_blank" class="icon"><img src="../../imagens/github-icon.png" alt=""><span class="icon">Github</span></a>
+            <a href="https://www.instagram.com/edsonctm/" target="_blank" class="icon"><img src="../../imagens/instagram-icon.png" alt=""><span class="icon">Instagram</span></a>
+            <a href="https://www.linkedin.com/in/edsontorres/" target="_blank" class="icon"><img src="../../imagens/linkedin-icon.png" alt=""><span class="icon">LinkedIn</span></a>
+            <a href="https://wa.me/5527981679958" target="_blank" class="icon"><img src="../../imagens/whatsapp-icon.png" alt=""><span class="icon">Whatsapp</span></a>
+        </div>
+    </footer>
+    <script src="../../header.js"></script>
+    <script src="carrossel.js"></script>
+<body>
+    
+</body>
+</html>

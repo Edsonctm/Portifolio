@@ -1,0 +1,66 @@
+#sobre{
+    width: 80%;
+    margin: 0px auto;
+    padding-bottom: 30px;
+}
+
+#descricao{
+    margin: 30px 0px;
+    font-size: 1.5em;
+}
+
+summary {
+    height: 2em;
+    background-color: rgba(223, 255, 223, 0.8);
+    padding: 5px 0px 0px 20px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 10px 0px;
+    border-radius: 50px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+body.dark summary{
+    background-color: rgb(81, 95, 81);
+    box-shadow: none;
+}
+
+summary:hover{
+    transform: translateY(-5px);
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+    font-size: 1.3em;
+    transition: transform 0.3s, box-shadow 0.3s, font-size .3s;
+}
+
+summary~p{
+    width: 90%;
+    margin: 0px auto;
+    padding: 10px 20px 15px 20px;
+    background-color: rgba(220, 247, 220, 1);
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+body.dark summary~p{
+    background-color: rgb(91, 102, 91);
+}
+
+summary~p>span{
+    font-style: italic;
+    font-weight: bold;
+    color: rgb(0, 0, 138);
+}
+
+body.dark summary~p>span{
+    color: rgb(162, 162, 243);
+}
+
+details > p{
+    font-size: 1.2em;
+}

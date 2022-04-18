@@ -1,0 +1,44 @@
+body{
+    background: #FFF; 
+    color: #000; 
+    font: 12pt serif;
+}
+
+body.dark{
+    color: black;
+    background: #FFF;
+}
+
+main{
+    margin: 10px 0px;
+    width: 100%;
+}
+
+#curriculo{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    box-shadow: none;
+}
+
+#curriculo a{
+    color: #333; 
+    text-decoration: none;
+}
+
+a[href]:after{
+    content: " (" attr(href) ")";
+}
+
+header, footer{
+    display: none;
+}
+
+h2 {
+    margin-top: 0px;
+}
+
+hr {
+    display: none;
+}

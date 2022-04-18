@@ -1,0 +1,99 @@
+header{
+    z-index: 99;
+}
+
+#curriculo {
+    width: 75%;
+    margin: 20px auto;
+    text-align: justify;
+    padding-bottom: 50px;
+    border: 1px solid black;
+    padding: 30px 20px;
+    border-radius: 15px;
+    background-color: rgb(235, 235, 235);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    }
+
+body.dark #curriculo {
+    background-color: rgb(100, 100, 100);
+    box-shadow: 5px 5px 15px rgba(255, 255, 255, 0.4);
+}
+
+#cabecalhoCV{
+    display: flex;
+
+}
+
+hr {
+    height: 1px;
+    width: 100%;
+    margin: 5px 0px;
+    background-image: linear-gradient(to left, rgb(235, 235, 235), var(--black));
+}
+
+body.dark hr{
+    background-image: linear-gradient(to right, var(--white), rgb(100, 100, 100));
+    transition: background-image .5s;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+#curriculo a {
+    color: black;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+body.dark #curriculo a{
+    color: white;
+}
+
+#curriculo a:hover{
+    font-weight: bold;
+}
+
+.personalPhoto{
+    width: 180px;
+    border-radius: 50%;
+}
+
+#darkPhoto{
+    display: none;
+    
+}
+
+body.dark #clearPhoto{
+    display: none;
+}
+
+body.dark #darkPhoto{
+    display: initial;
+}
+
+@media screen and (max-width: 895px){
+    .personalPhoto{
+        width: 120px;
+        border-radius: 50%;
+    }
+}
+
+@media screen and (max-width: 785px){
+    .personalPhoto{
+        width: 100px;
+        border-radius: 50%;
+    }
+
+    h1{
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 460px){
+    #cabecalhoCV{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+}

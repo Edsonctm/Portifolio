@@ -1,0 +1,305 @@
+/*Esse código de estilo é a base do portfólio, ou seja, faz o "esqueleto" do site, para manter todas as páginas padronizadas*/
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Indie+Flower&display=swap');
+
+
+* {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+:root {
+    --logotext: 'Indie flower';
+
+    /*Colors for the Dark Mode*/
+    --DM-BKColor: #121212;
+    --DM-BKHeader: #3B3A3A;
+    --DM-Letters: #E6E4E3;
+    --DM-Links: rgb(55, 248, 255);
+    --black: black;
+    --white: white;
+
+    /*Color for Clear Mode*/
+    --CM-BKColor: #E6E4E3;
+    --CM-BKHeader: rgb(255, 255, 255); 
+}
+
+body{
+    background-color: var(--white);
+    color: black;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+body.dark {
+    background-color: var(--DM-BKColor);
+    color: white;
+}
+
+header {
+    height: 80px;
+    min-width: 520px;
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+body.dark header {
+    background-color: var(--DM-BKHeader);
+    box-shadow: 2px 3px 2px rgba(255, 255, 255, 0.3);
+    transition: background-color 0.5s;
+}
+
+#navHeader {
+    display: flex;
+    justify-content: space-evenly;
+    width: 75%;
+}
+
+#navHeader a{
+    padding: 10px 5px;
+    color: var(--black);
+    font-size: 1.5em;
+    margin: auto 0px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: color 0.5s, transform 0.5s;
+}
+
+body.dark #navHeader a{
+    color: var(--white);
+}
+
+#navHeader a:hover{
+    transform: scale(1.1);
+    transform: translateY(-30%);
+}
+
+#logo {
+    display: inline-block;
+    position: relative;
+    width: 15%;
+    font-family: var(--logotext);
+    color: var(--black);
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: auto 0px;
+    text-align: center;
+}
+
+body.dark #logo {
+    color: var(--white);
+    transition: color 0.5s
+}
+
+#logo:hover {
+    cursor: pointer;
+}
+
+
+/*Inicio da configuração do botão Dark Mode */
+
+#botoesMenu{
+    margin: auto 0px;    
+}
+
+#darkMode{
+    width: 10%;
+    display: none;
+} 
+
+#labelDarkMode{
+    border: 1px solid black;
+    background-color: gray;
+    border-radius: 50px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 15px;
+    width: 50px;
+    left: -20px;
+    transform: scale(1.5);
+}
+
+#rollball{
+    background-color: var(--white);
+    border-radius: 50%;
+    position: absolute;
+    left: 3px;
+    height: 23px;
+    width: 23px;
+
+    transform: translateX(30px);
+    transition: transform 0.3s linear;
+}
+
+#darkMode:checked + #labelDarkMode #rollball {
+    transform: translateX(0px);
+}
+
+#labelDarkMode span{
+    font-size: 1.3em;
+}
+
+#sun{
+    color: yellow;
+}
+
+#moon{
+    position: relative;
+    left: 5px;
+}
+
+/*Fim da configuração do botão Dark Mode*/ 
+
+main {
+    margin-top: 90px;
+    width: 70%;
+    margin: 90px auto 0px auto;
+    padding-bottom: 30px;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px 0px;
+}
+
+p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: justify;
+    font-size: 1.3em;
+}
+
+
+
+/*Configuração do rodapé*/ 
+footer{
+    padding: 30px 0px;
+}
+
+
+footer p{
+    color: var(--black);
+    text-align: center;
+    font-size: 2em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-indent: 0px;
+}
+
+body.dark footer p{
+    color: var(--white);
+}
+
+#contato {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin: 10px auto;
+}
+
+.icon{
+    display: flex;
+    height: 30px;
+}
+
+body.dark footer img{
+    display: none;
+}
+
+span.icon{
+    text-align: center;
+    color: var(--black);
+    margin: auto 7px;
+    font-size: 1.3em;
+    font-weight: bold;
+
+}
+
+body.dark span.icon{
+    color: var(--white);
+}
+
+.icon:hover{
+    transform: scale(1.1);
+    transition: transform .5s;
+}
+
+
+/*Fim da configuração do rodapé*/
+
+/*Inicio da responsividade */
+
+@media screen and (max-width: 980px){
+    #logo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 660px){
+    #navHeader {
+        flex-wrap: wrap;
+    }
+
+    #navHeader a {
+        font-size: 1.2em;
+        margin: 0px 20px;
+    }
+
+    #contato{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contato a{
+        justify-content: center;
+        
+    }
+    #contato a img{
+       display: none;
+    }
+}
+
+@media screen and (max-width:500px){
+
+    header {
+        justify-content: start;
+    }
+
+    #navHeader {
+        flex-direction: column;
+        width: 50%;
+        justify-content: start;
+        align-items: flex-start;
+    }
+
+    #navHeader a {
+        width: auto;
+        font-size: 0.8em;
+        padding: 5px 0px;
+    }
+
+    #labelDarkMode {
+        transform: scale(1);
+    }
+
+@media screen and (max-width:300px){
+    
+        #labelDarkMode {
+        left: -110px;
+        top: 20px;
+    }
+}}
+
+/*Fim da responsividade */

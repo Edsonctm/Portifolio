@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilobase.css">
+    <link rel="stylesheet" href="projetos.css">
+    <title>Projetos</title>
+</head>
+<body>
+    <header>
+        <p id="logo">EdsonCTM</p>
+        <nav id="navHeader">
+            <a href="../index.html">Home</a>
+            <a href="../Curriculo/curriculo.html">Currículo</a>
+            <a href="../Sobre/sobre.html">Sobre</a>
+            <a href="#">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <!--A div abaixo é para o botão de modo noturno-->
+
+        <div id="botoesMenu">
+            <input type="checkbox" id="darkMode">
+            <label for="darkMode" id="labelDarkMode">
+                <span id="sun">&#x2600</span>
+                <span id="moon">&#x1F31B</span>
+                <div id="rollball"></div>
+            </label>
+            
+        </div>
+    </header>
+    <main>
+        <div>
+            <h1>Bem-vindo a área de projetos</h1>
+            <p>Os projetos estão catalogados conforme abaixo, com uma breve descrição do que se trata. Clique neles para entender melhor.</p>
+
+            <div id="projetosfield">
+                <div class="projetosx">
+                    <a href="./Carrossel-avaliacao/carrossel.html">
+                        <img src="./imagens/PhotoCarrossel.png" alt="imagem do projeto Carrossel">
+                        <h4 class="tituloProjeto">Carrossel</h4>
+                    </a>
+                    <p class="descricaoProjeto">Um Carrossel de avaliação de site, com foto, nome e profissão de cada avaliador, além de botões para avançar e voltar uma avaliação.</p>
+                    <p class="paragrafoLinguagens">Linguagens:</p><span class="spanLinguagens">HTML</span><span class="spanLinguagens">CSS</span><span class="spanLinguagens">JavaScript</span>
+                </div>
+                <div class="projetosx">
+                    <a href="./Contador/contador.html">
+                        <img src="./imagens/PhotoContador.png" alt="imagem do projet Contador">
+                        <h4 class="tituloProjeto">Contador</h4>
+                    </a> 
+                    <p class="descricaoProjeto">Um contador 1-1 com botões para adicionar, subtrair ou zerar o contador. A cor muda conforme o valor apresentado.</p>
+                    <p class="paragrafoLinguagens">Linguagens:</p><span class="spanLinguagens">HTML</span><span class="spanLinguagens">CSS</span><span class="spanLinguagens">JavaScript</span>
+                </div>
+                <div class="projetosx">
+                    <a href="./Troca-cor/trocacor.html">
+                        <img src="./imagens/PhotoTrocaCor.png" alt="imagem do projeto Troca Cor">
+                        <h4 class="tituloProjeto">Troca Cor</h4>
+                    </a>
+                    <p class="descricaoProjeto">Botão que troca aleatoriamente a cor de fundo do mosaico, informando qual é o valor hexagonal da cor atual.</p>
+                    <p class="paragrafoLinguagens">Linguagens:</p><span class="spanLinguagens">HTML</span><span class="spanLinguagens">CSS</span><span class="spanLinguagens">JavaScript</span>
+                </div>    
+
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>Contato</p>
+        <div id="contato">
+             <a href="https://github.com/Edsonctm" target="_blank" class="icon"><img src="../imagens/github-icon.png" alt=""><span class="icon">Github</span></a>
+            <a href="https://www.instagram.com/edsonctm/" target="_blank" class="icon"><img src="../imagens/instagram-icon.png" alt=""><span class="icon">Instagram</span></a>
+            <a href="https://www.linkedin.com/in/edsontorres/" target="_blank" class="icon"><img src="../imagens/linkedin-icon.png" alt=""><span class="icon">LinkedIn</span></a>
+            <a href="https://wa.me/5527981679958" target="_blank" class="icon"><img src="../imagens/whatsapp-icon.png" alt=""><span class="icon">Whatsapp</span></a>
+        </div>
+    </footer>
+    <script src="../header.js"></script>
+</body>
+</html>

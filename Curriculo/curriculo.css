@@ -96,4 +96,12 @@ body.dark #darkPhoto{
         justify-content: center;
         align-items: center;
     }
+
+    #curriculo{
+        width: 85%;
+    }
+
+    main{
+        width: 100%;
+    }
 }

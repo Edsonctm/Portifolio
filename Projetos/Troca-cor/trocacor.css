@@ -29,3 +29,19 @@
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     transition: transform .3s, box-shadow .3s;
 }
+
+@media screen and (max-width:800px){
+    main{
+        width: 99%;
+    }
+
+    #wall p{
+        font-size: 1.5em;
+    }
+
+    #wall #btn{
+        height: 30px;
+        width: 72px;
+        font-size: 0.8em;
+    }
+}

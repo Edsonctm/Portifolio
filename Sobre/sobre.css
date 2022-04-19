@@ -64,3 +64,17 @@ body.dark summary~p>span{
 details > p{
     font-size: 1.2em;
 }
+
+@media screen and (max-width:800px){
+    main {
+        width: 100%;
+    }
+
+    summary{
+        font-size: 0.8em;
+    }
+
+    summary:hover{
+        font-size: 1em;
+    }
+}

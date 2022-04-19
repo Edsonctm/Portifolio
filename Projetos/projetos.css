@@ -24,6 +24,7 @@ body.dark .projetosx{
 }
 
 .projetosx img{
+    object-fit: cover;
     width: 100%;
     height: 180px;
     border-radius: 15px 15px 0px 0px;
@@ -49,12 +50,20 @@ body.dark .tituloProjeto{
 
 .paragrafoLinguagens{
     display: inline-block;
-    margin-bottom: 10px;
 }
 
 .spanLinguagens{
     background-color: brown;
+    display: inline-block;
     border-radius: 10%;
     color: white;
     padding: 2px; margin: 0px 2px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width:800px){
+    .projetosx{
+        width: 100%;
+    }
+
 }

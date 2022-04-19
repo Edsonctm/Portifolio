@@ -55,3 +55,17 @@
 #diminuir {
     background-color: rgb(255, 107, 107);
 }
+
+@media screen and (max-width:800px){
+    main {
+        width: 100%;
+    }
+
+    #contador {
+        width: 95%;
+    }
+
+    .btn{
+    transform: scale(0.9);
+    }
+}

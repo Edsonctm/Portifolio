@@ -276,7 +276,7 @@ body.dark span.icon{
     header {
         justify-content: start;
     }
-
+    
     #navHeader {
         flex-direction: column;
         width: 50%;
@@ -294,12 +294,18 @@ body.dark span.icon{
         transform: scale(1);
     }
 
+    #sun, #moon{
+        transform: scale(0.6);
+    }
+
 @media screen and (max-width:300px){
     
         #labelDarkMode {
         left: -110px;
         top: 20px;
     }
+
+    
 }}
 
 /*Fim da responsividade */

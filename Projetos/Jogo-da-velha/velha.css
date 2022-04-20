@@ -1,0 +1,215 @@
+header {
+    z-index: 99;
+}
+
+main{
+    height: 400px;
+    width: 40%;
+    background: linear-gradient(90deg, rgba(65, 165, 131, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    border-radius: 10px;
+}
+
+.board{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    grid-template-columns: repeat(3, auto);
+    
+}
+
+.board.x .campo:not(.x):not(.o):hover::after,
+.board.x .campo:not(.x):not(.o):hover::before{
+    background: rgba(255, 255, 255, .3) !important;
+}
+
+.board.o .campo:not(.x):not(.o):hover::after,
+.board.o .campo:not(.x):not(.o):hover::before{
+    border: 15px solid rgba(255, 255, 255, .3) !important;
+}
+
+.campo{
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+body.dark .campo { 
+    border: 2px solid black;
+}
+
+.campo.x, .campo.o{
+    cursor: not-allowed;
+}
+
+/*Removendo as bordas do campo do jogo*/
+.campo:nth-child(1),
+.campo:nth-child(2),
+.campo:nth-child(3) {
+    border-top: none;
+}
+
+.campo:nth-child(1),
+.campo:nth-child(4),
+.campo:nth-child(7) {
+    border-left: none;
+}
+
+.campo:nth-child(3),
+.campo:nth-child(6),
+.campo:nth-child(9) {
+    border-right: none;
+}
+
+.campo:nth-child(7),
+.campo:nth-child(8),
+.campo:nth-child(9) {
+    border-bottom: none;
+}
+
+body.dark .campo:nth-child(1),
+body.dark .campo:nth-child(2),
+body.dark .campo:nth-child(3) {
+    border-top: none;
+}
+
+body.dark .campo:nth-child(1),
+body.dark .campo:nth-child(4),
+body.dark .campo:nth-child(7) {
+    border-left: none;
+}
+
+body.dark .campo:nth-child(3),
+body.dark .campo:nth-child(6),
+body.dark .campo:nth-child(9) {
+    border-right: none;
+}
+
+body.dark .campo:nth-child(7),
+body.dark .campo:nth-child(8),
+body.dark .campo:nth-child(9) {
+    border-bottom: none;
+}
+
+/*fim do removedor de bordas*/
+
+/*Layout do X*/
+.campo.x::before,
+.campo.x::after,
+.board.x .campo:not(.x):not(.o):hover::after,
+.board.x .campo:not(.x):not(.o):hover::before{
+    content: "";
+    height: 15%;
+    width: 90%;
+    background-color:white;
+    position: absolute;
+}
+
+body.dark .campo.x::before,
+body.dark .campo.x::after,
+body.dark .board.x .campo:not(.x):not(.o):hover::after,
+body.dark .board.x .campo:not(.x):not(.o):hover::before{
+    background-color: black;
+}
+
+.campo.x::before,
+.board.x .campo:hover::before{
+    transform: rotate(45deg);
+}
+
+.campo.x::after,
+.board.x .campo:hover::after{
+    transform: rotate(-45deg);
+}
+
+/*Fim do layout X*/
+
+/*Layout O (bolinha)*/
+.campo.o::before,
+.campo.o::after,
+.board.o .campo:not(.x):not(.o):hover::after,
+.board.o .campo:not(.x):not(.o):hover::before{
+    content: "";
+    height: 60%;
+    width: 60%;
+    border: 15px solid white;
+    position: absolute;
+    border-radius: 50%;
+}
+
+body.dark .campo.o::before,
+body.dark .campo.o::after,
+body.dark .board.o .campo:not(.x):not(.o):hover::after,
+body.dark .board.o .campo:not(.x):not(.o):hover::before{
+    border: 15px solid black;
+}
+/*Fim do layout O (bolinha)*/
+
+
+/*Mensagem de vitória*/
+.msgVitoria{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .8);
+    flex-direction: column;
+}
+
+.msgVitoria button{
+    font-size: 2.5rem;
+    background-color: rgba(65, 165, 131, 1);
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    margin-top: 16px;
+    color: white;
+    box-shadow: 10px 10px 5px black;
+    
+}
+
+.msgVitoria button:hover{
+    color: rgba(65, 165, 131, 1);
+    background-color: white;
+}
+
+.msgVitoria p {
+    color: white;
+    font-size: 5rem;
+    text-shadow: 10px 10px 5px black;
+}
+
+.mostrarMensagem{
+    display: flex;
+}
+
+/*Responsividade*/
+@media screen and (max-width: 1000px) {
+
+    main {
+        height: 500px;
+        width: 70vw;
+    }
+    
+}
+
+@media screen and (max-width: 470px) {
+
+    main {
+        height: 350px;
+        width: 100vw;
+    }
+    
+}
